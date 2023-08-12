@@ -10,9 +10,8 @@ if __name__ == "__main__":
     if counter == 0:
         print("0 arguments") 
     elif counter == 1:
-        print("{} argument:".format(counter, end=""))
-        print("{}: {}".format(counter, i))
+        print("{} argument:".format(counter))
     elif counter > 1:
-        print("{} arguments:".format(counter, end=""))
-        for j in range (1, len(sys.argv)):
+        print("{} arguments:".format(counter))
+    for j in range (1, len(sys.argv)):
             print("{}: {}".format(j, sys.argv[j]))
