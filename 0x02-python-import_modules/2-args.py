@@ -1,12 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-
-    j = 0
-    counter = -1
-
-    for i in sys.argv:
-        counter += 1
+    counter = len(sys.argv) - 1
     if counter == 0:
         print("0 arguments") 
     elif counter == 1:
