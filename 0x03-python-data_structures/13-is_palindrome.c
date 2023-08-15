@@ -9,7 +9,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *temp, *current;
 	unsigned int num_nod;
 	int *arr, i;
 
@@ -33,12 +33,15 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 	}
 
-	temp = *head;
-	for (i = num_nod - 1; temp != NULL; i--)
+	current = *head;
+	for (i = num_nod - 1; current != NULL; i--)
 	{
-		if (temp->n != arr[i])
+		if (current->n != arr[i])
+		{
+			free(arr);
 			return (0);
-		temp = temp->next;
+		}
+		currrent = cuurent->next;
 	}
 	free(arr);
 
