@@ -41,7 +41,7 @@ int is_palindrome(listint_t **head)
 			free(arr);
 			return (0);
 		}
-		currrent = cuurent->next;
+		current = current->next;
 	}
 	free(arr);
 
