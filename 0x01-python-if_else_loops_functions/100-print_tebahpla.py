@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-check = True
 for i in range(122, 96, -1):
-    if check:
+    if i % 2 == 0:
         a = i
     else:
         a = i - 32
