@@ -7,4 +7,3 @@ for i in range(0, 10):
             print("{}".format(j), end=', ')
         else:
             print(89, end='\n')
-
