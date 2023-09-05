@@ -3,8 +3,8 @@
 for i in range(0, 10):
     for j in range(i + 1, 10):
         if (i != 8):
-            print(i, end='')
-            print(j, end=', ')
+            print("{}".format(i), end='')
+            print("{}".format(j), end=', ')
         else:
             print(89, end='\n')
 
