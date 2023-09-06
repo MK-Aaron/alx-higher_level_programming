@@ -2,20 +2,21 @@
 
 /**
  * check_cycle - Confirms if a list has a cycle
- * list: point to head node
+ * @list: point to head node
  * Return: 0 if there is no cycle and 1 if there is cycle
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *constant = list;
+	listint_t *slow, *fast;
 
-	list = list->next;
-
-	while (list)
+	slow = list;
+	fast = list->next->next;
+	while (slow && slow->next && fast->next->next)
 	{
-		if (list == constant)
+		if (slow == fast)
 			return (1);
-		list = list->next;
+		slow = slow->next;
+		fast = fast->next->next;
 	}
 	return (0);
 }
