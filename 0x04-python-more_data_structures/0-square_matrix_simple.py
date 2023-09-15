@@ -9,4 +9,4 @@ def square_matrix_simple(matrix=[]):
 
 
 def square_array(arr):
-    return[i ** 2 for i in arr]
+    return [i ** 2 for i in arr]
