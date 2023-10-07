@@ -40,7 +40,7 @@ Now use it:
 	...
 	TypeError: last_name must be a string
 
-	>>> say_my_name(Aaron", None)
+	>>> say_my_name("Aaron", None)
 	Traceback (most recent call last):
 	...
 	TypeError: last_name must be a string
