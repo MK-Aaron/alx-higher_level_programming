@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """The module is 10-square.py"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
