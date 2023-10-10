@@ -3,6 +3,7 @@
 
 a text file"""
 
+
 def write_file(filename="", text=""):
     """Writes a string to a text file"""
 
@@ -20,4 +21,4 @@ def write_file(filename="", text=""):
         for char in word:
             charCount += 1
 
-    return charCount
+    return charCount + (len(wordList) - 1)
