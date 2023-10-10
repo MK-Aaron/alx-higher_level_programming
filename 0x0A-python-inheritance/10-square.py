@@ -2,7 +2,7 @@
 """The module is 10-square.py"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 """write a class square that inherits from rectangle"""
 
