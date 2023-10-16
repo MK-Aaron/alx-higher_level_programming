@@ -42,3 +42,18 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """update the class square dimentions
+
+        Args:
+            args (list): list of arguements
+            kwargs (dict): dictionary with key/value
+        """
+        up = ["id", "size", "x", "y"]
+        if args:
+            for i in range(len(args)):
+                setattr(self, up[i], args[i])
+        else:
+            for j in kwargs:
+                setattr(self, j, kwargs[j])
+
