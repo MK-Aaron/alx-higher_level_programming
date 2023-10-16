@@ -39,3 +39,15 @@ class Base:
         json_str = cls.to_json_string(dict_list)
         with open(path, "w", encoding="utf-8") as f:
             f.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Convert JSON string to dictionary
+    
+        Args:
+            from_json_string (str): string representing a list of dictionaries
+        """
+        if json_string:
+            return json.loads(json_string)
+        else:
+            return []
