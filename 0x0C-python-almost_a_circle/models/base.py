@@ -44,8 +44,8 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Convert JSON string to dictionary
-    
-        Args:
+
+        Arg:
             from_json_string (str): string representing a list of dictionaries
         """
         if json_string:
