@@ -141,19 +141,18 @@ class Rectangle(Base):
         wh = "{:d}/{:d}".format(self.width, self.height)
         return f"[Rectangle] ({self.id}) {xy} - {wh}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns new value to each attribute
 
         Args:
             args (list): list of arguements
+            kargs (dict): dictionary with key/value
         """
-        if len(args) > 0:
-            super().__init__(args[0])
-        if len(args) > 1:
-            self.__width = args[1]
-        if len(args) >  2:
-            self.__height = args[2]
-        if len(args) > 3:
-            self.__x = args[3]
-        if len(args) > 4:
-            self.__y = args[4]
+        up = ["id", "width", "height", "x", "y"]
+        if args:
+            for i in range(len(args)):
+                setattr(self, up[i], args[i])
+
+        else:
+            for j in kwargs:
+                setattr(self, j, kwargs[j])
