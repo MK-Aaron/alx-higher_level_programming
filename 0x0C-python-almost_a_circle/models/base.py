@@ -36,10 +36,12 @@ class Base:
             list_objs (list): list of instances that inherit from base
         """
         path = cls.__name__ + ".json"
-        dict_list = [obj.to_dictionary() for obj in list_objs]
-        json_str = cls.to_json_string(dict_list)
+        if list_objs:
+            dict_list = [obj.to_dictionary() for obj in list_objs]
+        else:
+            dict_list = []
         with open(path, "w", encoding="utf-8") as f:
-            f.write(json_str)
+            f.write(cls.to_json_string(dict_list))
 
     @staticmethod
     def from_json_string(json_string):
