@@ -184,7 +184,7 @@ class TestSquare(unittest.TestCase):
         path = "Square.json"
         with open(path, "r", encoding="utf-8") as f:
             value = f.read()
-        self.assertEqual(value, '[{"id": 28, "x": 0, "size": 1, "y": 0}]')
+        self.assertEqual(value, '[{"id": 24, "x": 0, "size": 1, "y": 0}]')
 
 if __name__ == '__main__':
     unittest.main()

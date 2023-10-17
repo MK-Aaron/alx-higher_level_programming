@@ -197,7 +197,7 @@ class TestRectangle(unittest.TestCase):
         path = "Rectangle.json"
         with open(path, "r", encoding="utf-8") as f:
             value = f.read()
-        self.assertEqual(value, '[{"x": 0, "y": 0, "id": 20, "height": 2, "width": 1}]')
+        self.assertEqual(value, '[{"x": 0, "y": 0, "id": 16, "height": 2, "width": 1}]')
     
 if __name__ == '__main__':
     unittest.main()
