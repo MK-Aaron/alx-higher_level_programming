@@ -12,12 +12,17 @@ int check_cycle(listint_t *list)
 	listint_t *fast;
 	listint_t *slow;
 
-	if (list == NULL)
+	fast = malloc(sizeof(listint_t));
+	if (fast == NULL)
+		return (0);
+		
+	slow = malloc(sizeof(listint_t));
+	if (slow == NULL)
 		return (0);
 
 	fast = slow = list;
 
-	while (fast->next->next != NULL && slow->next != NULL)
+	while (slow->next != NULL && fast->next->next != NULL)
 	{
 		fast = fast->next->next;
 		slow = slow->next;
