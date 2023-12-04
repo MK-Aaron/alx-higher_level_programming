@@ -10,6 +10,5 @@ def print_list_integer(my_list=[]):
     Returns:
         Nothing
     """
-    if my_list:
-        [print(i) for i in list(my_list)]
-        
+    for i in list(my_list):
+        print(f"{i:d}")
